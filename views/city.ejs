@@ -1,0 +1,36 @@
+
+<html>
+
+    <body style="background-color:powderblue;">
+        <style >
+            table, th, td {
+              border: 3px solid black;
+            }
+            </style>
+            <!--table to display records-->
+        <table>
+            <tr>
+                <th >City</th>
+                <th>Country</th>
+                <th>Name</th>
+                <th>Population</th>
+                <th>Is Coastal</th>
+                <th>Area in KM</th>
+                <!--access the city in index and display-->
+            </tr><% city.forEach((city)=>{%><tr>
+                <td><%= city.cty_code %></td>
+                <td><%= city.co_code %></td>
+                <td><%= city.cty_name %></td>
+                <td><%= city.population %></td>
+                <td><%= city.isCoastal %></td>
+                <td><%= city.areaKM %></td>
+            </tr>
+            <%})%>
+        </table>
+        <!--go to list cities link-->
+        <a href="http://localhost:3000/listcities"><button type="button">Cities</button></a> 
+          
+    </body>
+    
+    
+    </html>

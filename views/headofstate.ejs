@@ -1,0 +1,36 @@
+<html>
+
+<body style="background-color:powderblue;">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+    <h2 style="font-family:courier;">
+        Heads of State For Each Country
+    </h2>
+    <!--links to other pages-->
+    <a href="http://localhost:3000/addHead"><button type="button">Add Head Of State</button></a> 
+    <br>
+    <a href="http://localhost:3000/"><button type="button">Home</button></a> 
+    <br>
+    <!--table-->
+    <table>
+        <!--row 1-->
+        <tr>
+            <th>Country Initials</th>
+            <th>Head of the State</th>
+<!--row 2-->
+        </tr><% headofstate.forEach((headofstate)=>{%><tr>
+            <td><%= headofstate._id %></td>
+            <td><%= headofstate.headOfState %></td>
+        </tr>
+        <%})%>
+    </table>
+    <br>
+   
+      
+</body>
+
+
+</html>

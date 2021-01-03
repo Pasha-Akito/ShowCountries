@@ -1,0 +1,40 @@
+<html>
+<!--styling-->
+<body style="background-color:powderblue;">
+    <style>
+ table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+    <!--table to display records-->
+   <table>
+       <tr>
+           <!--add new country link-->
+        <a href="http://localhost:3000/add"> <button type="button" style="font-family:courier;">Add Country</button></a>
+       </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Update</th>
+        <th>Delete</th>
+         <!--display each individual country-->
+    </tr><% country.forEach((country)=>{%><tr>
+        <td><%= country.co_code %></td>
+        <td><%= country.co_name %></td>
+        <td><%= country.co_details %></td>
+         
+        <td>
+           <a href="http://localhost:3000/edit/<%= country.co_code %>"> Update</button></a>
+        </td> 
+       
+        <td>
+            <a href="/listcountries/<%= country.co_code %>">Delete</button></a>
+        </td> 
+    </tr>
+    <%})%>
+</table>
+<br>
+<a href="/ %>">Home</button></a>
+</body>
+</html>

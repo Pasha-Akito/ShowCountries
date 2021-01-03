@@ -1,0 +1,40 @@
+<html>
+
+<body style="background-color:powderblue;">
+    
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+
+    <a href="http://localhost:3000/"><button type="button" style="font-family:courier;">Main Page</button></a> 
+    <br>
+    <br>
+    <!--table-->
+    <table>
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <th>Name</th>
+            <th>Population</th>
+            <th>Is Coastal</th>
+            <th>Area in KM</th>
+            <th>Details</th>
+             <!--display the cities in table. got from index.js-->
+        </tr><% city.forEach((city)=>{%><tr>
+            <td><%= city.cty_code %></td>
+            <td><%= city.co_code %></td>
+            <td><%= city.cty_name %></td>
+            <td><%= city.population %></td>
+            <td><%= city.isCoastal %></td>
+            <td><%= city.areaKM %></td>
+            <td>
+               <a href="/listcities/<%= city.cty_code %>"> Details</a>
+            </td> 
+        </tr>
+        <%})%>
+    </table>
+
+</body>
+</html>
